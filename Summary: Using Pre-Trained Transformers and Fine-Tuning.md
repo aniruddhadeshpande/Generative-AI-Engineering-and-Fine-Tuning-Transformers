@@ -1,24 +1,22 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
 # Using Pre-Trained Transformers and Fine-Tuning
 
 ## Why Use Pre-Trained Transformers?
 
-Transformer models like **BERT**, **Llama**, and **GPT** have revolutionized natural language processing with their attention-based architecture. These models are pre-trained on large unlabeled text datasets, allowing them to learn rich representations of language that can be leveraged for a wide range of downstream NLP tasks.[^1]
+Transformer models like **BERT**, **Llama**, and **GPT** have revolutionized natural language processing with their attention-based architecture. These models are pre-trained on large unlabeled text datasets, allowing them to learn rich representations of language that can be leveraged for a wide range of downstream NLP tasks.
 
-Training large language models (LLMs) from scratch with billions of parameters is extremely costly. It requires powerful hardware like GPUs, substantial training data, weeks or months of processing time, and complex optimization across multiple training epochs. The infrastructure setup and maintenance add significant additional costs.[^1]
+Training large language models (LLMs) from scratch with billions of parameters is extremely costly. It requires powerful hardware like GPUs, substantial training data, weeks or months of processing time, and complex optimization across multiple training epochs. The infrastructure setup and maintenance add significant additional costs.
 
 This is where **fine-tuning** becomes invaluable.
 
 ## What Is Fine-Tuning?
 
-Fine-tuning adapts pre-trained models to specific tasks or domains using domain-specific data. This process adjusts the model's parameters to improve task performance while leveraging the pre-existing language understanding already learned during pre-training.[^1]
+Fine-tuning adapts pre-trained models to specific tasks or domains using domain-specific data. This process adjusts the model's parameters to improve task performance while leveraging the pre-existing language understanding already learned during pre-training.
 
-Rather than training from scratch, fine-tuning dramatically **enhances efficiency**, saving both time and computational resources by bypassing the initial training stages and achieving faster convergence.[^1]
+Rather than training from scratch, fine-tuning dramatically **enhances efficiency**, saving both time and computational resources by bypassing the initial training stages and achieving faster convergence.
 
 ## Benefits of Fine-Tuning
 
-Fine-tuning offers several key advantages:[^1]
+Fine-tuning offers several key advantages:
 
 **Transfer Learning with Limited Data**: Fine-tuning is especially valuable when you have limited labeled data available. It enables you to leverage the model's existing knowledge, providing time and resource efficiency.
 
@@ -28,7 +26,7 @@ Fine-tuning offers several key advantages:[^1]
 
 ## Common Pitfalls to Avoid
 
-When fine-tuning, be aware of these challenges:[^1]
+When fine-tuning, be aware of these challenges:
 
 **Overfitting**: Using a small dataset or extending training epochs excessively can cause the model to perform well only on training data. Avoid this by using adequate training data and appropriate epoch counts.
 
@@ -44,21 +42,21 @@ When fine-tuning, be aware of these challenges:[^1]
 
 ### 1. Self-Supervised Fine-Tuning
 
-The model learns to predict missing words in large unlabeled datasets, such as predicting the next word or identifying masked words. This approach is useful when labeled data is scarce.[^1]
+The model learns to predict missing words in large unlabeled datasets, such as predicting the next word or identifying masked words. This approach is useful when labeled data is scarce.
 
 ### 2. Supervised Fine-Tuning
 
-The model is fine-tuned using **labeled data** from your target task, improving its performance on specific tasks like sentiment classification. This is the most straightforward approach when high-quality labeled data is available.[^1]
+The model is fine-tuned using **labeled data** from your target task, improving its performance on specific tasks like sentiment classification. This is the most straightforward approach when high-quality labeled data is available.
 
 ### 3. Reinforcement Learning from Human Feedback (RLHF)
 
-The model is adjusted based on **explicit feedback from human annotators**, aligning its outputs with human preferences and judgments. ChatGPT, developed by OpenAI, is a prominent example that combines multiple techniques including RLHF.[^1]
+The model is adjusted based on **explicit feedback from human annotators**, aligning its outputs with human preferences and judgments. ChatGPT, developed by OpenAI, is a prominent example that combines multiple techniques including RLHF.
 
 ## Advanced Fine-Tuning Techniques
 
 ### Direct Preference Optimization (DPO)
 
-**DPO** is an emerging approach that optimizes language models directly based on human preferences. Its key advantages include:[^1]
+**DPO** is an emerging approach that optimizes language models directly based on human preferences. Its key advantages include:
 
 **Simplicity**: DPO is more straightforward to implement than reinforcement learning approaches.
 
@@ -70,9 +68,9 @@ The model is adjusted based on **explicit feedback from human annotators**, alig
 
 ### Evaluating Model Responses
 
-Scoring LLM responses is challenging because humans excel at **comparing** two responses but struggle with assigning absolute numerical scores. For example, when answering "Which country owns Antarctica?"—one response might be accurate and informative while another is humorous but factually incorrect. While it's easy to say which is better, quantifying the difference numerically is complex.[^1]
+Scoring LLM responses is challenging because humans excel at **comparing** two responses but struggle with assigning absolute numerical scores. For example, when answering "Which country owns Antarctica?"—one response might be accurate and informative while another is humorous but factually incorrect. While it's easy to say which is better, quantifying the difference numerically is complex.
 
-This challenge is addressed using **reward modeling**, where an LLM like BERT is fine-tuned to produce a single numerical output (regression-style scoring) that evaluates model responses.[^1]
+This challenge is addressed using **reward modeling**, where an LLM like BERT is fine-tuned to produce a single numerical output (regression-style scoring) that evaluates model responses.
 
 ***
 
@@ -80,17 +78,13 @@ This challenge is addressed using **reward modeling**, where an LLM like BERT is
 
 Supervised fine-tuning can be done in two ways:
 
-**Full Fine-Tuning**: All parameters of the model are tuned for the specific task. This approach uses more computational resources but can achieve better task-specific performance.[^1]
+**Full Fine-Tuning**: All parameters of the model are tuned for the specific task. This approach uses more computational resources but can achieve better task-specific performance.
 
-**Parameter-Efficient Fine-Tuning (PEFT)**: Large pre-trained models are fine-tuned **without modifying most of their original parameters**. This is a more resource-efficient approach, often using techniques like LoRA (Low-Rank Adaptation) mentioned in your course. PEFT allows you to adapt powerful models with significantly less computational overhead.[^1]
+**Parameter-Efficient Fine-Tuning (PEFT)**: Large pre-trained models are fine-tuned **without modifying most of their original parameters**. This is a more resource-efficient approach, often using techniques like LoRA (Low-Rank Adaptation) mentioned in your course. PEFT allows you to adapt powerful models with significantly less computational overhead.
 
 ***
 
 ## Key Takeaway
 
-Fine-tuning bridges the gap between powerful pre-trained models and your specific needs. By choosing the right fine-tuning approach—whether self-supervised, supervised, or human-feedback-based—and using techniques like PEFT, you can adapt state-of-the-art transformers for specialized tasks without the prohibitive cost of training from scratch.[^1]
-
-<div align="center">⁂</div>
-
-[^1]: subtitle_Using-Pre-Trained-Transformers-and-Fine-Tuning.txt
+Fine-tuning bridges the gap between powerful pre-trained models and your specific needs. By choosing the right fine-tuning approach—whether self-supervised, supervised, or human-feedback-based—and using techniques like PEFT, you can adapt state-of-the-art transformers for specialized tasks without the prohibitive cost of training from scratch.
 
