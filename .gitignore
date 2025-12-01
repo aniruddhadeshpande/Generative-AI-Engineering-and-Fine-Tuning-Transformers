@@ -83,3 +83,6 @@ logs/
 .cache/
 
 import_image.py
+trained_model/
+*.txt
+!requirements.txt
